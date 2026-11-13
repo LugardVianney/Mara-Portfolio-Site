@@ -287,7 +287,7 @@
     .bar-right .btn { display: none; }
   }
   @media (max-width: 620px) {
-    body { font-size: 1.0625rem; }
+    body { font-size: 1rem; }
     .pillars, .facts, .toolkit, .row, .services { grid-template-columns: minmax(0, 1fr); }
     .float.f1 { left: 0; }
     .stack { max-width: 360px; }
@@ -308,6 +308,34 @@
     .contact-intro { padding: 16px 10px 4px; }
     form { padding: 18px; }
     .err { min-height: 0; }
+    /* smaller type on phones */
+    .brand { font-size: 1rem; }
+    .hero h1 { font-size: 2.1rem; }
+    .lede { font-size: 1.05rem; }
+    .btn { font-size: 0.95rem; padding: 12px 22px; }
+    .byline b { font-size: 1rem; }
+    .byline span { font-size: 0.88rem; }
+    .ticker li { font-size: 1.3rem; }
+    .ticker li::after { margin-inline: 18px; width: 10px; height: 10px; }
+    .sec-head h2, .band h2, .contact-intro h2 { font-size: 1.9rem; }
+    .sec-head p { font-size: 0.98rem; }
+    .statement { font-size: 1.4rem; }
+    .pillar h3 { font-size: 1.15rem; }
+    .pillar p { font-size: 0.95rem; }
+    .facts dd { font-size: 0.95rem; }
+    .feature h3 { font-size: 1.45rem; }
+    .feature-body > p { font-size: 0.98rem; }
+    .kind { font-size: 0.8rem; }
+    .did { font-size: 0.95rem; }
+    .excerpt p:not(.excerpt-label) { font-size: 1.02rem; line-height: 1.6; }
+    .service h3 { font-size: 1.1rem; }
+    .service p { font-size: 0.93rem; }
+    .principles li { font-size: 1.2rem; }
+    .role-item h3 { font-size: 1.25rem; }
+    .role-item > p:not(.org) { font-size: 0.96rem; }
+    .tool-row dt { font-size: 1.1rem; }
+    .tool { font-size: 0.9rem; }
+    .contact-intro > p { font-size: 1rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
