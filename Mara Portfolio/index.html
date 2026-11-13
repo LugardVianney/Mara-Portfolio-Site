@@ -1,818 +1,827 @@
-<title>Kalu Eunice Amarachi</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Kalu Eunice Amarachi is a storytelling ghostwriter in Imo State, Nigeria, writing relationship stories, personal-growth content, brand stories and social media content for remote clients.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;1,400;1,500&display=swap">
-<style>
-  /* Layout: a bright, bookish single page. Rounded colour panels on a blush ground,
-     left-aligned type, and three generated book covers as the recurring visual.
-     The boldest moment is the hero cover stack; one saturated rose band
-     ("How I work") gives the scroll a pause. Everything else stays light. */
-  :root {
-    --bg: #FFF6F8;
-    --surface: #FFFFFF;
-    --ink: #17133A;
-    --muted: #5A5778;
-    --line: #EBDDE6;
-    --rose: #C22F58;
-    --rose-bright: #F0577F;
-    --blush: #FFDDE6;
-    --butter: #FFD77A;
-    --lilac: #E4DCFF;
-    --mint: #CFEFE0;
-    --focus: #1F5FBF;
-
-    --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-    --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --font-story: "Newsreader", Georgia, "Times New Roman", serif;
-
-    --radius-lg: 32px;
-    --radius-md: 22px;
-    --shadow: 0 1px 2px rgba(23, 19, 58, .06), 0 14px 34px -16px rgba(23, 19, 58, .22);
-    color-scheme: light;
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    line-height: 1.6;
-    padding-block: 0 20px;
-    padding-left: max(16px, env(safe-area-inset-left, 0px));
-    padding-right: max(16px, env(safe-area-inset-right, 0px));
-  }
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
-  .wrap { max-width: 1160px; margin: 0 auto; }
-  a { color: inherit; }
-  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; margin: 0; text-wrap: balance; }
-  p { margin: 0; }
-  ul { margin: 0; padding: 0; list-style: none; }
-  section[id] { scroll-margin-top: 96px; }
-
-  /* ---------- header ---------- */
-  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; padding-block: 12px; }
-  .bar { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: color-mix(in srgb, var(--surface) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 22px; box-shadow: var(--shadow); }
-  .brand { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; }
-  .nav { display: flex; align-items: center; gap: 4px; }
-  .nav a { text-decoration: none; font-size: 0.95rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--muted); }
-  .nav a:hover { background: var(--blush); color: var(--ink); }
-  .bar-right { display: flex; align-items: center; gap: 8px; }
-  .menu-btn { display: none; font: inherit; font-weight: 600; font-size: 0.95rem; background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: 9px 16px; color: var(--ink); cursor: pointer; }
-
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-family: var(--font-body); font-weight: 700; font-size: 1rem; text-decoration: none; border: 2px solid var(--rose); cursor: pointer; transition: transform .15s, background-color .15s, color .15s; }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-solid { background: var(--rose); color: #fff; }
-  .btn-solid:hover { background: #A62449; border-color: #A62449; }
-  .btn-line { background: transparent; color: var(--rose); border-color: var(--ink); color: var(--ink); }
-  .btn-line:hover { background: var(--ink); color: #fff; }
-  .btn-sm { padding: 10px 20px; font-size: 0.95rem; }
-
-  /* ---------- hero ---------- */
-  .hero { position: relative; border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 64px); margin-top: 8px; overflow: hidden;
-    background:
-      radial-gradient(520px 380px at 92% 8%, var(--lilac), transparent 70%),
-      radial-gradient(460px 360px at 70% 100%, color-mix(in srgb, var(--butter) 75%, transparent), transparent 70%),
-      radial-gradient(520px 420px at 0% 100%, var(--blush), transparent 70%),
-      var(--surface);
-    display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-  .hero-copy { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; min-width: 0; }
-  .live { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; font-size: 0.95rem; font-weight: 600; }
-  .live i { width: 10px; height: 10px; border-radius: 50%; background: #1FA971; box-shadow: 0 0 0 4px rgba(31, 169, 113, .2); }
-  .hero h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); }
-  .lede { font-size: 1.25rem; line-height: 1.55; max-width: 31em; color: var(--muted); }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .byline { display: flex; align-items: center; gap: 14px; padding-top: 6px; }
-  .avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: .02em; flex: none; }
-  .byline b { display: block; font-family: var(--font-display); font-size: 1.1rem; line-height: 1.2; }
-  .byline span { color: var(--muted); font-size: 0.95rem; }
-
-  /* generated book covers */
-  .cover { --c-bg: var(--ink); --c-fg: #fff; --c-a: var(--rose-bright); --c-b: var(--butter);
-    container-type: inline-size; position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 6px 16px 16px 6px; background: var(--c-bg); color: var(--c-fg);
-    box-shadow: inset 12px 0 14px -10px rgba(0, 0, 0, .38), 0 26px 40px -20px rgba(23, 19, 58, .55), 0 4px 10px rgba(23, 19, 58, .14); }
-  /* artwork sits in the upper half, the title block in the lower half */
-  .cover::before { content: ""; position: absolute; width: 52%; aspect-ratio: 1; border-radius: 50%; background: var(--c-a); right: -8%; top: 11%; }
-  .cover::after { content: ""; position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--c-b); left: 15%; top: 33%; }
-  .cover-in { position: relative; z-index: 1; height: 100%; padding: 9cqw 9cqw 8cqw 13cqw; display: flex; flex-direction: column; }
-  .cover-kind { font-size: 5.4cqw; font-weight: 600; letter-spacing: .01em; }
-  .cover-title { margin-top: auto; font-family: var(--font-display); font-weight: 700; font-size: 10cqw; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
-  .cover.c2 .cover-title, .cover.c3 .cover-title { font-size: 8.6cqw; }
-  .cover-author { margin-top: 5cqw; font-size: 4.6cqw; font-weight: 600; opacity: .9; }
-  .cover.c2 { --c-bg: var(--butter); --c-fg: var(--ink); --c-a: var(--ink); --c-b: var(--rose-bright); }
-  .cover.c2::before { border-radius: 999px 999px 0 0; aspect-ratio: 1 / 1.15; width: 44%; right: auto; left: 30%; top: 12%; }
-  .cover.c2::after { width: 20%; left: auto; right: 12%; top: 16%; }
-  .cover.c3 { --c-bg: var(--rose); --c-fg: #fff; --c-a: var(--blush); --c-b: var(--mint); }
-  .cover.c3::before { width: 56%; right: -12%; top: 10%; }
-  .cover.c3::after { width: 24%; left: 14%; top: 34%; }
-
-  .stack { position: relative; width: 100%; max-width: 480px; margin-inline: auto; aspect-ratio: 1 / 1.08; }
-  .stack .cover { position: absolute; width: 58%; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
-  .stack .c1 { left: 0; top: 12%; transform: rotate(-9deg); z-index: 1; }
-  .stack .c2 { left: 21%; top: 0; transform: rotate(2deg); z-index: 3; }
-  .stack .c3 { right: 0; top: 18%; transform: rotate(11deg); z-index: 2; }
-  .stack:hover .c1 { transform: rotate(-13deg) translateX(-3%); }
-  .stack:hover .c3 { transform: rotate(15deg) translateX(3%); }
-  .float { position: absolute; z-index: 4; display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border-radius: 999px; padding: 9px 16px; font-size: 0.9rem; font-weight: 600; box-shadow: var(--shadow); }
-  .float::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--rose-bright); }
-  .float.f1 { left: -2%; bottom: 8%; }
-  .float.f2 { right: 0; top: 2%; }
-  .float.f2::before { background: var(--butter); }
-
-  .hero-copy > *, .stack .cover { animation: rise .75s cubic-bezier(.2, .7, .2, 1) backwards; }
-  .hero-copy > :nth-child(2) { animation-delay: .07s; }
-  .hero-copy > :nth-child(3) { animation-delay: .14s; }
-  .hero-copy > :nth-child(4) { animation-delay: .21s; }
-  .hero-copy > :nth-child(5) { animation-delay: .28s; }
-  .stack .c1 { animation-delay: .15s; }
-  .stack .c2 { animation-delay: .27s; }
-  .stack .c3 { animation-delay: .39s; }
-  @keyframes rise { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
-
-  /* ---------- ticker ---------- */
-  .ticker { overflow: hidden; margin-block: 36px 8px; padding-block: 6px; }
-  .ticker-track { display: flex; width: max-content; animation: slide 36s linear infinite; }
-  .ticker ul { display: flex; align-items: center; flex: none; }
-  .ticker li { display: flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.5rem); letter-spacing: -0.02em; white-space: nowrap; }
-  .ticker li::after { content: ""; width: 14px; height: 14px; margin-inline: 28px; background: var(--rose-bright); border-radius: 3px; rotate: 45deg; }
-  .ticker li:nth-child(even)::after { background: var(--butter); border-radius: 50%; rotate: 0deg; }
-  @keyframes slide { to { transform: translateX(-50%); } }
-
-  /* ---------- sections ---------- */
-  .section { padding-block: clamp(56px, 8vw, 104px) 0; }
-  .sec-head { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px 56px; align-items: end; margin-bottom: clamp(28px, 4vw, 48px); }
-  .sec-head h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
-  .sec-head p { color: var(--muted); max-width: 30em; }
-
-  /* about */
-  .about { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 32px clamp(32px, 6vw, 80px); align-items: start; }
-  .portrait { aspect-ratio: 4 / 5; border-radius: 50% 50% 22px 22px / 38% 38% 22px 22px; background: linear-gradient(165deg, var(--blush), var(--lilac) 70%); display: grid; place-items: center; position: relative; overflow: hidden; }
-  .portrait span { font-family: var(--font-display); font-weight: 800; font-size: clamp(3.4rem, 8vw, 5.4rem); color: var(--rose); letter-spacing: -0.03em; }
-  .portrait::after { content: ""; position: absolute; width: 38%; aspect-ratio: 1; border-radius: 50%; background: var(--butter); right: 10%; bottom: 8%; opacity: .9; z-index: 0; }
-  .portrait span { position: relative; z-index: 1; }
-  .about-body { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
-  .statement { font-family: var(--font-story); font-style: italic; font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.22; text-wrap: balance; }
-  .about-body .copy { display: flex; flex-direction: column; gap: 14px; max-width: 38em; color: var(--muted); }
-  .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .pillar { border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; gap: 10px; }
-  .pillar:nth-child(1) { background: var(--blush); }
-  .pillar:nth-child(2) { background: var(--butter); }
-  .pillar h3 { font-size: 1.35rem; }
-  .pillar p { font-size: 1rem; }
-  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
-  .facts > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 20px 22px; }
-  .facts dt { font-size: 0.9rem; font-weight: 600; color: var(--rose); }
-  .facts dd { margin: 6px 0 0; font-weight: 600; line-height: 1.4; font-size: 1rem; }
-
-  /* samples */
-  .features { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
-  .feature { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 52px); display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px clamp(28px, 5vw, 64px); align-items: center; box-shadow: var(--shadow); }
-  .feature:nth-child(1) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--lilac) 55%, var(--surface))); }
-  .feature:nth-child(2) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--butter) 40%, var(--surface))); }
-  .feature:nth-child(3) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--blush) 70%, var(--surface))); }
-  .feature .cover { width: 100%; max-width: 300px; justify-self: center; transform: rotate(-3deg); }
-  .feature:nth-child(2) .cover { transform: rotate(2.5deg); }
-  .feature:nth-child(3) .cover { transform: rotate(-2deg); }
-  .feature-body { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-  .kind { align-self: flex-start; background: var(--ink); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; }
-  .feature h3 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
-  .feature-body > p { color: var(--muted); max-width: 36em; }
-  .did { display: grid; gap: 10px; font-size: 1rem; }
-  .did li { position: relative; padding-left: 32px; }
-  .did li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--blush); }
-  .did li::after { content: ""; position: absolute; left: 7px; top: 7px; width: 8px; height: 5px; border-left: 2.5px solid var(--rose); border-bottom: 2.5px solid var(--rose); rotate: -45deg; }
-  .excerpt { background: color-mix(in srgb, var(--surface) 80%, transparent); border: 1px dashed #D6BFCB; border-radius: var(--radius-md); padding: 20px 24px; display: flex; flex-direction: column; gap: 10px; }
-  .excerpt-label { font-size: 0.8rem; font-weight: 700; color: var(--rose); }
-  .excerpt p:not(.excerpt-label) { font-family: var(--font-story); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink); max-width: 40em; }
-
-  /* services */
-  .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .service { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 28px; display: flex; flex-direction: column; gap: 14px; transition: transform .2s, box-shadow .2s; }
-  .service:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-  .icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: var(--blush); color: var(--rose); }
-  .service:nth-child(3n+2) .icon { background: var(--butter); color: var(--ink); }
-  .service:nth-child(3n) .icon { background: var(--lilac); color: #4B2FB0; }
-  .icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .service h3 { font-size: 1.3rem; }
-  .service p { color: var(--muted); font-size: 1rem; }
-
-  /* principles band */
-  .band { margin-top: clamp(56px, 8vw, 104px); background: var(--rose); color: #fff; border-radius: var(--radius-lg); padding: clamp(32px, 6vw, 80px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px clamp(32px, 6vw, 80px); position: relative; overflow: hidden; }
-  .band::after { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: var(--rose-bright); right: -120px; bottom: -160px; opacity: .55; }
-  .band h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); position: relative; z-index: 1; }
-  .principles { display: grid; gap: 4px; position: relative; z-index: 1; }
-  .principles li { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.2; letter-spacing: -0.01em; padding-block: 16px; border-bottom: 1px solid rgba(255, 255, 255, .35); display: flex; gap: 16px; align-items: baseline; }
-  .principles li:last-child { border-bottom: 0; }
-  .principles li::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--butter); flex: none; translate: 0 -2px; }
-
-  /* experience */
-  .roles { position: relative; display: flex; flex-direction: column; gap: 20px; padding-left: clamp(26px, 4vw, 44px); }
-  .roles::before { content: ""; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
-  .role-item { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(22px, 3vw, 34px); display: flex; flex-direction: column; gap: 10px; }
-  .role-item::before { content: ""; position: absolute; left: calc(-1 * clamp(26px, 4vw, 44px) + 0px); top: 34px; width: 16px; height: 16px; border-radius: 50%; background: var(--rose); border: 4px solid var(--bg); box-sizing: content-box; translate: -4px 0; }
-  .when { align-self: flex-start; background: var(--lilac); font-size: 0.85rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; font-variant-numeric: tabular-nums; }
-  .role-item h3 { font-size: 1.5rem; }
-  .org { color: var(--rose); font-weight: 700; }
-  .role-item > p:not(.org) { color: var(--muted); max-width: 44em; font-size: 1.02rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
-  .chip { padding: 5px 13px; background: var(--blush); border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
-
-  /* toolkit */
-  .toolkit { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .tool-row { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; gap: 16px; }
-  .tool-row dt { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
-  .tool-row dd { margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-  .tool { display: inline-flex; align-items: center; gap: 9px; padding: 8px 16px 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-size: 0.95rem; font-weight: 600; }
-  .tool svg { width: 20px; height: 20px; flex: none; }
-  .tool small { color: var(--muted); font-weight: 500; font-size: 0.8rem; }
-  .i-word { color: #2B579A; }
-  .i-docs { color: #4285F4; }
-  .i-canva { color: var(--rose); }
-  .i-ig { color: #E4405F; }
-  .i-fb { color: #1877F2; }
-  .i-tt { color: var(--ink); }
-  .i-method { color: var(--rose); }
-
-  /* contact */
-  .contact { margin-top: clamp(56px, 8vw, 104px); border-radius: var(--radius-lg); padding: clamp(24px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 36px clamp(28px, 5vw, 72px); align-items: start;
-    background:
-      radial-gradient(480px 360px at 0% 0%, var(--butter), transparent 70%),
-      radial-gradient(520px 420px at 100% 100%, var(--lilac), transparent 70%),
-      var(--blush); }
-  .contact-intro { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-  .contact-intro h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
-  .contact-intro > p { color: var(--ink); opacity: .8; font-size: 1.15rem; }
-  .details { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
-  .details div { background: color-mix(in srgb, var(--surface) 75%, transparent); border-radius: 16px; padding: 14px 18px; font-weight: 600; }
-  .details small { display: block; font-size: 0.8rem; font-weight: 600; color: var(--rose); }
-  form { display: flex; flex-direction: column; gap: 18px; background: var(--surface); border-radius: var(--radius-md); padding: clamp(22px, 3.5vw, 36px); box-shadow: var(--shadow); min-width: 0; }
-  .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-  .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-  label { font-weight: 700; font-size: 0.95rem; }
-  input, select, textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: 13px 15px; width: 100%; }
-  textarea { min-height: 140px; resize: vertical; }
-  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; border-color: var(--focus); }
-  .err { color: #A3262F; font-size: 0.9rem; min-height: 1.2em; }
-  .result { display: flex; flex-direction: column; gap: 12px; padding: 16px; background: var(--lilac); border-radius: 16px; }
-  .result p { font-size: 0.95rem; }
-  .result pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: 0.95rem; background: var(--surface); border-radius: 12px; padding: 12px 14px; }
-  .result .btn { align-self: flex-start; }
-
-  footer { max-width: 1160px; margin: 40px auto 0; padding-block: 28px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 0.95rem; }
-
-  /* ---------- responsive ---------- */
-  @media (max-width: 960px) {
-    .hero, .band, .contact, .about, .sec-head { grid-template-columns: minmax(0, 1fr); }
-    .feature { grid-template-columns: minmax(0, 1fr); }
-    .feature .cover { max-width: 260px; justify-self: start; }
-    .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .portrait { max-width: 300px; }
-  }
-  @media (max-width: 760px) {
-    .menu-btn { display: inline-block; }
-    .nav { display: none; position: absolute; left: 0; right: 0; top: calc(100% + 8px); flex-direction: column; align-items: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 10px; box-shadow: var(--shadow); }
-    .top.open .nav { display: flex; }
-    .nav a { padding: 12px 16px; }
-    .bar-right .btn { display: none; }
-  }
-  @media (max-width: 620px) {
-    body { font-size: 1.0625rem; }
-    .pillars, .facts, .toolkit, .row, .services { grid-template-columns: minmax(0, 1fr); }
-    .float.f1 { left: 0; }
-    .stack { max-width: 360px; }
-    .live { font-size: 0.85rem; padding: 7px 14px; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .hero-copy > *, .stack .cover { animation: none; }
-    .ticker-track { animation: none; width: auto; flex-wrap: wrap; }
-    .ticker ul[aria-hidden] { display: none; }
-    .ticker ul { flex-wrap: wrap; row-gap: 10px; }
-    .btn, .service, .stack .cover { transition: none; }
-  }
-</style>
-
-<div class="wrap">
-  <header class="top" id="header">
-    <div class="bar">
-      <a class="brand" href="#top">Kalu Eunice Amarachi</a>
-      <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#samples">Writing samples</a>
-        <a href="#services">Services</a>
-        <a href="#experience">Experience</a>
-        <a href="#toolkit">Toolkit</a>
-      </nav>
-      <div class="bar-right">
-        <a class="btn btn-solid btn-sm" href="#contact">Let’s talk</a>
-        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-h">
-      <div class="hero-copy">
-        <p class="live"><i aria-hidden="true"></i>Available for remote freelance projects</p>
-        <h1 id="hero-h">Every story should make the reader feel something.</h1>
-        <p class="lede">I write emotionally engaging stories that help creators, brands, and individuals connect with their audiences and leave a lasting impression.</p>
-        <div class="actions">
-          <a class="btn btn-solid" href="#samples">Read the writing samples</a>
-          <a class="btn btn-line" href="#contact">Have a story to tell?</a>
-        </div>
-        <div class="byline">
-          <div class="avatar" aria-hidden="true"><img src="headshot.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:50%;display:block"></div>
-          <div>
-            <b>Kalu Eunice Amarachi</b>
-            <span>Storytelling Ghostwriter, Imo State, Nigeria</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="stack" role="img" aria-label="Covers of three writing samples: The Last Message, A Note to the Woman I’m Becoming, and The Small Business Behind the Scent">
-        <div class="cover c1"><div class="cover-in"><span class="cover-kind">A short story</span><span class="cover-title">The Last Message</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-        <div class="cover c2"><div class="cover-in"><span class="cover-kind">A reflective story</span><span class="cover-title">A Note to the Woman I’m Becoming</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-        <div class="cover c3"><div class="cover-in"><span class="cover-kind">A brand story</span><span class="cover-title">The Small Business Behind the Scent</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-        <span class="float f1">Relationship stories</span>
-        <span class="float f2">Brand stories</span>
-      </div>
-    </section>
-
-    <div class="ticker" aria-label="Focus areas: Storytelling, Relationship Stories, Personal Growth, Brand Stories, Social Media Content">
-      <div class="ticker-track">
-        <ul>
-          <li>Storytelling</li><li>Relationship Stories</li><li>Personal Growth</li><li>Brand Stories</li><li>Social Media Content</li>
-        </ul>
-        <ul aria-hidden="true">
-          <li>Storytelling</li><li>Relationship Stories</li><li>Personal Growth</li><li>Brand Stories</li><li>Social Media Content</li>
-        </ul>
-      </div>
-    </div>
-
-    <section class="section" id="about" aria-labelledby="about-h">
-      <div class="sec-head">
-        <h2 id="about-h">About me</h2>
-      </div>
-      <div class="about">
-        <!-- Replace the monogram with <img src="headshot.jpg" alt="Kalu Eunice Amarachi"> once the headshot arrives. -->
-        <div class="portrait" aria-hidden="true"><img src="headshot.jpg" alt="Kalu Eunice Amarachi" style="position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block"></div>
-        <div class="about-body">
-          <p class="statement">I am an emerging storytelling ghostwriter who turns ideas, experiences, and emotions into clear, engaging stories.</p>
-          <div class="copy">
-            <p>I focus on writing content that feels relatable, keeps readers interested, and encourages them to connect, reflect, or take action. I can help creators and businesses communicate their message through thoughtful storytelling.</p>
-          </div>
-          <div class="pillars">
-            <div class="pillar">
-              <h3>Creative storytelling</h3>
-              <p>Relationship stories, emotional stories, fictional narratives, and personal-growth stories.</p>
-            </div>
-            <div class="pillar">
-              <h3>Brand and social storytelling</h3>
-              <p>Relatable content that helps individuals and businesses communicate their values and connect with their audience.</p>
-            </div>
-          </div>
-          <dl class="facts">
-            <div><dt>Education</dt><dd>B.Sc. Industrial Physics, Ebonyi State University, Abakaliki (2024)</dd></div>
-            <div><dt>Currently</dt><dd>Developing practical skills in storytelling, ghostwriting, and digital content creation</dd></div>
-            <div><dt>Based in</dt><dd>Owerri, Imo State, Nigeria</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="samples" aria-labelledby="samples-h">
-      <div class="sec-head">
-        <h2 id="samples-h">Writing samples</h2>
-        <p>Original pieces written to show how I open a story, build tension, and close it. None were commissioned by a client.</p>
-      </div>
-      <div class="features">
-        <article class="feature">
-          <div class="cover c1"><div class="cover-in"><span class="cover-kind">A short story</span><span class="cover-title">The Last Message</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-          <div class="feature-body">
-            <span class="kind">Relationship fiction, emotional short story</span>
-            <h3>The Last Message</h3>
-            <p>An original short story built around a breakup message and the emotional weight of shared memories. Written to demonstrate emotional hooks and reader engagement.</p>
-            <ul class="did">
-              <li>Developed the premise and emotional conflict.</li>
-              <li>Wrote an attention-grabbing opening.</li>
-              <li>Used concise dialogue and relatable details.</li>
-              <li>Built tension around the final message.</li>
-              <li>Structured the story for possible social media serialisation.</li>
-            </ul>
-            <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
-              <p class="excerpt-label">Excerpt</p>
-              <p><strong>PART 1: FOUR WORDS THAT CHANGED EVERYTHING</strong></p>
-              <p>At exactly 11:47 p.m., her phone vibrated.</p>
-              <p>She picked it up, expecting his usual goodnight message.</p>
-              <p>But what she saw made her heart stop.</p>
-              <p>“I think we should end this.”</p>
-              <details>
-                <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
-                <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
-                  <p>She read it once.</p>
-                  <p>Twice.</p>
-                  <p>Then a third time, hoping the words would somehow change.</p>
-                  <p>Three years.</p>
-                  <p>Three years of memories, promises, late-night calls, laughter, arguments, and dreams about forever.</p>
-                  <p>And all he needed to end it were four words.</p>
-                  <p>She typed, “Why?”</p>
-                  <p>Deleted it.</p>
-                  <p>Typed, “Did I do something wrong?”</p>
-                  <p>Deleted that too.</p>
-                  <p>Finally, she gathered the courage to ask the question that had been eating her up for months.</p>
-                  <p>“Did you ever really love me?”</p>
-                  <p>For several minutes, there was silence.</p>
-                  <p>Then the typing bubbles appeared.</p>
-                  <p>Disappeared.</p>
-                  <p>Appeared again.</p>
-                  <p>Her heart raced.</p>
-                  <p>Finally, his reply came.</p>
-                  <p>“I did. I just stopped knowing how.”</p>
-                  <p>She dropped her phone onto the bed.</p>
-                  <p>Tears rolled down her cheeks.</p>
-                  <p>But something about his response bothered her.</p>
-                  <p>If he had stopped knowing how to love her, when did it happen?</p>
-                  <p>Was it when he started ignoring her calls?</p>
-                  <p>When his replies became shorter?</p>
-                  <p>Or when she began feeling lonely even while she was still in a relationship?</p>
-                  <p>She wiped her tears and opened their old pictures.</p>
-                  <p>Then she noticed something she had never paid attention to before.</p>
-                  <p>In almost every recent picture, she was smiling.</p>
-                  <p>But he wasn’t looking at her.</p>
-                  <p>He was always looking somewhere else.</p>
-                  <p>She stared at one picture for a long time.</p>
-                  <p>Then her phone vibrated again.</p>
-                  <p>It was him.</p>
-                  <p>One final message.</p>
-                  <p>“There’s something I should have told you a long time ago.”</p>
-                  <p>Her hands began to shake.</p>
-                  <p>She opened the message.</p>
-                  <p>And what she read next changed everything.</p>
-                  <p>TO BE CONTINUED…</p>
-                  <p>Sometimes, the hardest part of losing someone isn’t saying goodbye. It’s discovering what they kept from you while you were still holding on.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature">
-          <div class="cover c2"><div class="cover-in"><span class="cover-kind">A reflective story</span><span class="cover-title">A Note to the Woman I’m Becoming</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-          <div class="feature-body">
-            <span class="kind">Personal-growth, reflective storytelling</span>
-            <h3>A Note to the Woman I’m Becoming</h3>
-            <p>A reflective story about self-worth, rebuilding confidence, and choosing progress during difficult seasons, written to create an intimate connection with readers.</p>
-            <ul class="did">
-              <li>Chose a relatable personal-growth theme.</li>
-              <li>Created a warm, honest narrative voice.</li>
-              <li>Connected struggle with hope and practical reflection.</li>
-              <li>Wrote a memorable closing message suitable for social media.</li>
-            </ul>
-            <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
-              <p class="excerpt-label">Excerpt</p>
-              <p>Dear future me, I hope you are proud of how far we’ve come.</p>
-              <p>Dear woman I’m becoming,</p>
-              <p>I hope you remember the girl who kept going even when life gave her every reason to give up.</p>
-              <p>I hope you remember the nights she cried silently because she didn’t know how things would work out.</p>
-              <details>
-                <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
-                <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
-                  <p>The mornings she woke up with a heavy heart but still found the strength to face another day.</p>
-                  <p>The dreams she kept private because she was afraid people would laugh at how big they were.</p>
-                  <p>I hope you never forget her.</p>
-                  <p>She wasn’t perfect. She made mistakes, trusted the wrong people, questioned her worth and sometimes settled for less than she deserved.</p>
-                  <p>But she was trying.</p>
-                  <p>Trying to understand herself. Trying to build a better life. Trying to become someone she could look at in the mirror and genuinely admire.</p>
-                  <p>I know the journey won’t always be easy.</p>
-                  <p>There will be moments when you’ll feel behind, when your achievements seem small and when you’ll wonder if all your efforts are worth it.</p>
-                  <p>But please, don’t be too hard on yourself.</p>
-                  <p>You are allowed to grow slowly.</p>
-                  <p>You are allowed to change your mind.</p>
-                  <p>You are allowed to outgrow people, places and versions of yourself that no longer reflect who you are.</p>
-                  <p>And most importantly, you are allowed to start again.</p>
-                  <p>I hope you become a woman who chooses peace over approval, purpose over pressure and self-respect over temporary happiness.</p>
-                  <p>I hope you build the life you once prayed for.</p>
-                  <p>But even if everything doesn’t happen exactly as planned, I hope you never stop believing in yourself.</p>
-                  <p>Until then, keep growing. Keep learning. Keep showing up.</p>
-                  <p>I’m not where I want to be yet, but I’m no longer where I used to be.</p>
-                  <p>And that, in itself, is progress.</p>
-                  <p>With love,<br>The woman who refused to give up.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature">
-          <div class="cover c3"><div class="cover-in"><span class="cover-kind">A brand story</span><span class="cover-title">The Small Business Behind the Scent</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
-          <div class="feature-body">
-            <span class="kind">Brand storytelling, promotional copy</span>
-            <h3>The Small Business Behind the Scent</h3>
-            <p>A proposed brand story showing how a small perfume business can communicate its personality, customer experience, and value through warm, customer-focused storytelling. This is a concept sample.</p>
-            <ul class="did">
-              <li>Framed the brand story around identity and confidence.</li>
-              <li>Used customer-focused language.</li>
-              <li>Connected fragrance with mood and self-expression.</li>
-              <li>Developed copy suitable for a social media post or an About section.</li>
-            </ul>
-            <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
-              <p class="excerpt-label">Excerpt</p>
-              <p>Every beautiful scent has a story. This one began with a dream.</p>
-              <p>It started with a simple desire: to make people feel beautiful, confident and unforgettable.</p>
-              <p>What looked like a small perfume business to the outside world was something much bigger to the woman behind it.</p>
-              <p>It was a dream built from little savings, late nights, countless prayers and the courage to start something of her own.</p>
-              <details>
-                <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
-                <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
-                  <p>There were days when orders came in, and there were days when her phone remained silent.</p>
-                  <p>There were moments she questioned whether she was doing enough, whether people would trust her brand and whether her little business would ever become something remarkable.</p>
-                  <p>But she kept going.</p>
-                  <p>Every perfume bottle she packaged carried more than fragrance. It carried dedication, hope and a piece of a dream she refused to abandon.</p>
-                  <p>She wasn’t just selling perfumes. She was helping people create memories, express their personalities and leave a beautiful impression wherever they went.</p>
-                  <p>With every customer, every order and every recommendation, the dream grew a little stronger.</p>
-                  <p>Today, the journey is still unfolding.</p>
-                  <p>The brand may be small, but the vision has never been small.</p>
-                  <p>Because behind every bottle is a woman who dared to begin, even when she didn’t have everything figured out.</p>
-                  <p>This is more than a fragrance business. It’s a story of passion, courage and the beauty of starting small.</p>
-                  <p>Small beginnings. Beautiful impressions. A scent worth remembering.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="services" aria-labelledby="services-h">
-      <div class="sec-head">
-        <h2 id="services-h">Services</h2>
-        <p>Six kinds of writing I take on for creators, brands, and individuals.</p>
-      </div>
-      <ul class="services">
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
-          <h3>Emotional storytelling</h3>
-          <p>Narratives that help readers feel connected to the people and experiences in a story.</p>
-        </li>
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
-          <h3>Relationship stories</h3>
-          <p>Relatable stories about love, heartbreak, communication, and personal decisions.</p>
-        </li>
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
-          <h3>Personal-growth content</h3>
-          <p>Lessons and life experiences turned into encouraging, reflective writing.</p>
-        </li>
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
-          <h3>Brand storytelling</h3>
-          <p>Words that help a business express its personality, values, and customer promise.</p>
-        </li>
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></div>
-          <h3>Social media writing</h3>
-          <p>Short, engaging posts designed for platforms such as Instagram, Facebook, and TikTok.</p>
-        </li>
-        <li class="service">
-          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
-          <h3>Creative writing and editing</h3>
-          <p>Story ideas developed, flow improved, and wording polished for clarity and impact.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="band" id="principles" aria-labelledby="principles-h">
-      <h2 id="principles-h">How I work</h2>
-      <ul class="principles">
-        <li>Make the reader feel something.</li>
-        <li>Keep the message clear and relatable.</li>
-        <li>Respect each client’s voice and brief.</li>
-        <li>Revise carefully and meet agreed deadlines.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="experience" aria-labelledby="experience-h">
-      <div class="sec-head">
-        <h2 id="experience-h">Experience</h2>
-        <p>Where I have built my writing and communication skills.</p>
-      </div>
-      <div class="roles">
-        <article class="role-item">
-          <span class="when">2024 to present</span>
-          <h3>Secretary / Administrative Support</h3>
-          <p class="org">Yhugo’s Properties &amp; Co.</p>
-          <p>Support daily office operations by handling correspondence and calls, responding to client inquiries, preparing documents and reports, maintaining filing systems, and keeping administrative tasks organized. This work has strengthened my written communication, organization, and attention to detail.</p>
-          <ul class="chips">
-            <li class="chip">Written Communication</li>
-            <li class="chip">Client Relations</li>
-            <li class="chip">Document Preparation</li>
-            <li class="chip">Organization</li>
-            <li class="chip">Attention to Detail</li>
-          </ul>
-        </article>
-        <article class="role-item">
-          <span class="when">2026 to present</span>
-          <h3>Storytelling Ghostwriter</h3>
-          <p class="org">Independent storytelling portfolio</p>
-          <p>Developing original short-story samples across relationship, emotional, personal-growth, and brand-storytelling themes. Practising opening hooks, narrative pacing, relatable voice, and endings suited to digital audiences.</p>
-          <ul class="chips">
-            <li class="chip">Creative Writing</li>
-            <li class="chip">Story Development</li>
-            <li class="chip">Hooks</li>
-            <li class="chip">Editing</li>
-            <li class="chip">Social Storytelling</li>
-          </ul>
-        </article>
-        <article class="role-item">
-          <span class="when">Personal business</span>
-          <h3>Marketing Content Creator and Developer</h3>
-          <p class="org">Scent by Marah / Marah’s Touch Cleaning Services</p>
-          <p>Support small-business promotion by writing customer-facing copy, social media captions, service descriptions, and promotional messages for perfume and cleaning-service offerings.</p>
-          <ul class="chips">
-            <li class="chip">Promotional Writing</li>
-            <li class="chip">Customer Communication</li>
-            <li class="chip">Social Media Content</li>
-            <li class="chip">Brand Messaging</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="toolkit" aria-labelledby="toolkit-h">
-      <div class="sec-head">
-        <h2 id="toolkit-h">Toolkit</h2>
-        <p>The tools and methods I use to draft, design, and share stories.</p>
-      </div>
-      <dl class="toolkit">
-        <div class="tool-row">
-          <dt>Writing and drafting</dt>
-          <dd>
-            <span class="tool"><svg class="i-word" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M64 48l112 0 0 88c0 39.8 32.2 72 72 72l88 0 0 240c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16zM224 67.9l92.1 92.1-68.1 0c-13.3 0-24-10.7-24-24l0-68.1zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-261.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0L64 0zm71.3 274.2c-3.2-12.9-16.2-20.7-29.1-17.5S85.5 273 88.7 285.8l32 128c2.5 10.2 11.4 17.5 21.9 18.1s20.1-5.7 23.8-15.5l25.5-68.1 25.5 68.1c3.7 9.8 13.3 16.1 23.8 15.5s19.4-7.9 21.9-18.1l32-128c3.2-12.9-4.6-25.9-17.5-29.1s-25.9 4.6-29.1 17.5l-13.3 53.2-20.9-55.8C211 262.2 202 256 192 256s-19 6.2-22.5 15.6l-20.9 55.8-13.3-53.2z"/></svg>Microsoft Word<small>working knowledge</small></span>
-            <span class="tool"><svg class="i-docs" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818zm0-3.273H7.091V9.273h9.818zM14.727 6h6l-6-6z"/></svg>Google Docs<small>working knowledge</small></span>
-          </dd>
-        </div>
-        <div class="tool-row">
-          <dt>Portfolio design</dt>
-          <dd>
-            <span class="tool"><svg class="i-canva" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M512 256c0 .9 0 1.8 0 2.7-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48 0 3.4 .4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5 .1-7 .2-10.6 .2-141.4 0-256-114.6-256-256S114.6 0 256 0 512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>Canva<small>working knowledge</small></span>
-          </dd>
-        </div>
-        <div class="tool-row">
-          <dt>Social platforms</dt>
-          <dd>
-            <span class="tool"><svg class="i-ig" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.9 5.9 0 0 0-2.124 1.388 5.9 5.9 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076s-.069 1.688-.063 4.947.021 3.667.083 4.947c.061 1.277.264 2.149.563 2.911.308.789.72 1.457 1.388 2.123a5.9 5.9 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552 1.278.056 1.689.069 4.947.063s3.668-.021 4.947-.082c1.28-.06 2.147-.265 2.91-.563a5.9 5.9 0 0 0 2.123-1.388 5.9 5.9 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912.056-1.28.07-1.69.063-4.948-.006-3.258-.02-3.667-.081-4.947-.06-1.28-.264-2.148-.564-2.911a5.9 5.9 0 0 0-1.387-2.123 5.86 5.86 0 0 0-2.128-1.38C19.074.322 18.202.12 16.924.066 15.647.009 15.236-.006 11.977 0S8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.7 3.7 0 0 1-1.382-.895 3.7 3.7 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228-.06-1.264-.072-1.644-.08-4.848-.006-3.204.006-3.583.061-4.848.05-1.169.246-1.805.408-2.228.216-.561.477-.96.895-1.382a3.7 3.7 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417 1.265-.06 1.644-.072 4.848-.08 3.203-.006 3.583.006 4.85.062 1.168.05 1.804.244 2.227.408.56.216.96.475 1.382.895s.681.817.9 1.378c.165.422.362 1.056.417 2.227.06 1.265.074 1.645.08 4.848.005 3.203-.006 3.583-.061 4.848-.051 1.17-.245 1.805-.408 2.23-.216.56-.477.96-.896 1.38a3.7 3.7 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418-1.266.06-1.645.072-4.85.079s-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442 1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024 6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16 4 4 0 0 1 8 12.008"/></svg>Instagram<small>working knowledge</small></span>
-            <span class="tool"><svg class="i-fb" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg>Facebook<small>working knowledge</small></span>
-            <span class="tool"><svg class="i-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07"/></svg>TikTok<small>working knowledge</small></span>
-          </dd>
-        </div>
-        <div class="tool-row">
-          <dt>Writing methods</dt>
-          <dd>
-            <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path id="nib" d="M368.5 18.3l-50.1 50.1 125.3 125.3 50.1-50.1c21.9-21.9 21.9-57.3 0-79.2L447.7 18.3c-21.9-21.9-57.3-21.9-79.2 0zM279.3 97.2l-.5 .1-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-2.9 8.7-1.9 18.2 2.5 26L161.7 316.4c-1.1-4-1.6-8.1-1.6-12.4 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-4.3 0-8.5-.6-12.4-1.6L40.3 505.7c7.8 4.4 17.2 5.4 26 2.5l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 .1-.5-135.5-135.5z"/></svg>Story outlines</span>
-            <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Hooks</span>
-            <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Narrative structure</span>
-            <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Proofreading</span>
-          </dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-h">
-      <div class="contact-intro">
-        <h2 id="contact-h">Have a story to tell? Let’s bring it to life.</h2>
-        <p>Contact me to discuss your project.</p>
-        <div class="details" id="details">
-          <div><small>Location</small>Owerri, Imo State, Nigeria</div>
-          <div><small>Availability</small>Remote freelance projects</div>
-          <div id="emailRow" hidden><small>Email</small><a id="emailLink" href="#"></a></div>
-          <div id="phoneRow" hidden><small>Phone</small><span id="phoneText"></span></div>
-        </div>
-      </div>
-      <form id="inquiry" novalidate>
-        <div class="row">
-          <div class="field">
-            <label for="f-name">Your name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-            <div class="err" id="e-name" aria-live="polite"></div>
-          </div>
-          <div class="field">
-            <label for="f-email">Your email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
-            <div class="err" id="e-email" aria-live="polite"></div>
-          </div>
-        </div>
-        <div class="field">
-          <label for="f-type">What do you need written?</label>
-          <select id="f-type" name="type">
-            <option>Relationship or emotional story</option>
-            <option>Personal-growth content</option>
-            <option>Brand story</option>
-            <option>Social media content</option>
-            <option>Editing a draft</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-msg">Tell me about your project</label>
-          <textarea id="f-msg" name="message" required></textarea>
-          <div class="err" id="e-msg" aria-live="polite"></div>
-        </div>
-        <button class="btn btn-solid" type="submit">Send inquiry</button>
-        <div class="result" id="result" hidden>
-          <p id="resultNote"></p>
-          <pre id="resultText"></pre>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <span>© <span id="yr">2026</span> Kalu Eunice Amarachi</span>
-    <span>Storytelling Ghostwriter, Imo State, Nigeria</span>
-  </footer>
-</div>
-
-<script>
-  /* Contact details. Fill these in once confirmed and the matching rows appear. */
-  var CONTACT = { email: "amarachieunice271@gmail.com", phone: "" };
-
-  (function () {
-    document.getElementById("yr").textContent = new Date().getFullYear();
-
-    if (CONTACT.email) {
-      document.getElementById("emailRow").hidden = false;
-      var a = document.getElementById("emailLink");
-      a.textContent = CONTACT.email;
-      a.href = "mailto:" + CONTACT.email;
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Kalu Eunice Amarachi</title>
+    <meta name="claude:viewport-fit-sides" content="cover">
+    <meta name="description" content="Kalu Eunice Amarachi is a storytelling ghostwriter in Imo State, Nigeria, writing relationship stories, personal-growth content, brand stories and social media content for remote clients.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;1,400;1,500&display=swap">
+    <style>
+      /* Layout: a bright, bookish single page. Rounded colour panels on a blush ground,
+         left-aligned type, and three generated book covers as the recurring visual.
+         The boldest moment is the hero cover stack; one saturated rose band
+         ("How I work") gives the scroll a pause. Everything else stays light. */
+      :root {
+        --bg: #FFF6F8;
+        --surface: #FFFFFF;
+        --ink: #17133A;
+        --muted: #5A5778;
+        --line: #EBDDE6;
+        --rose: #C22F58;
+        --rose-bright: #F0577F;
+        --blush: #FFDDE6;
+        --butter: #FFD77A;
+        --lilac: #E4DCFF;
+        --mint: #CFEFE0;
+        --focus: #1F5FBF;
+    
+        --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+        --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        --font-story: "Newsreader", Georgia, "Times New Roman", serif;
+    
+        --radius-lg: 32px;
+        --radius-md: 22px;
+        --shadow: 0 1px 2px rgba(23, 19, 58, .06), 0 14px 34px -16px rgba(23, 19, 58, .22);
+        color-scheme: light;
       }
-    if (CONTACT.phone) {
-      document.getElementById("phoneRow").hidden = false;
-      document.getElementById("phoneText").textContent = CONTACT.phone;
-    }
-
-    /* mobile menu */
-    var header = document.getElementById("header");
-    var menuBtn = document.getElementById("menuBtn");
-    function setMenu(open) {
-      header.classList.toggle("open", open);
-      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-      menuBtn.textContent = open ? "Close" : "Menu";
-    }
-    menuBtn.addEventListener("click", function () { setMenu(!header.classList.contains("open")); });
-    document.getElementById("nav").addEventListener("click", function (e) {
-      if (e.target.tagName === "A") setMenu(false);
-    });
-
-    /* inquiry form */
-    var form = document.getElementById("inquiry");
-    var result = document.getElementById("result");
-    var text = "";
-    function setErr(id, msg) { document.getElementById(id).textContent = msg || ""; }
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var msg = form.message.value.trim();
-      var ok = true;
-      setErr("e-name", name ? "" : "Enter your name."); if (!name) ok = false;
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      setErr("e-email", emailOk ? "" : "Enter an email address like name@example.com."); if (!emailOk) ok = false;
-      setErr("e-msg", msg ? "" : "Add a few lines about your project."); if (!msg) ok = false;
-      if (!ok) { result.hidden = true; return; }
-
-      // Send to client's email via FormSubmit
-      result.hidden = false;
-      document.getElementById("resultNote").textContent = "Sending...";
-      document.getElementById("resultText").textContent = "";
-
-     fetch("https://formsubmit.co/ajax/" + CONTACT.email, {
-       method: "POST",
-       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-       body: JSON.stringify({
-         name: name,
-         email: email,
-          "project-type": form.type.value,
-         message: msg,
-         _subject: "New " + form.type.value + " inquiry from portfolio site",
-         _template: "table"
-       })
-      })
-     .then(function(response) { return response.json(); })
-     .then(function(data) {
-        document.getElementById("resultNote").textContent = "Sent! We will get back to you soon.";
-        document.getElementById("resultText").textContent = "Name: " + name + "\nEmail: " + email + "\nProject type: " + form.type.value + "\n\n" + msg;
-        form.reset();
-     })
-      .catch(function() {
-       document.getElementById("resultNote").textContent = "Could not send. Please email us directly at " + CONTACT.email;
-      });
-    });
-  })();
-</script>
+    
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 1.125rem;
+        line-height: 1.6;
+        padding-block: 0 20px;
+        padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px));
+      }
+      body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+      .wrap { max-width: 1160px; margin: 0 auto; }
+      a { color: inherit; }
+      :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+      h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; margin: 0; text-wrap: balance; }
+      p { margin: 0; }
+      ul { margin: 0; padding: 0; list-style: none; }
+      section[id] { scroll-margin-top: 96px; }
+    
+      /* ---------- header ---------- */
+      .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; padding-block: 12px; }
+      .bar { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: color-mix(in srgb, var(--surface) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 22px; box-shadow: var(--shadow); }
+      .brand { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; }
+      .nav { display: flex; align-items: center; gap: 4px; }
+      .nav a { text-decoration: none; font-size: 0.95rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--muted); }
+      .nav a:hover { background: var(--blush); color: var(--ink); }
+      .bar-right { display: flex; align-items: center; gap: 8px; }
+      .menu-btn { display: none; font: inherit; font-weight: 600; font-size: 0.95rem; background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: 9px 16px; color: var(--ink); cursor: pointer; }
+    
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-family: var(--font-body); font-weight: 700; font-size: 1rem; text-decoration: none; border: 2px solid var(--rose); cursor: pointer; transition: transform .15s, background-color .15s, color .15s; }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-solid { background: var(--rose); color: #fff; }
+      .btn-solid:hover { background: #A62449; border-color: #A62449; }
+      .btn-line { background: transparent; color: var(--rose); border-color: var(--ink); color: var(--ink); }
+      .btn-line:hover { background: var(--ink); color: #fff; }
+      .btn-sm { padding: 10px 20px; font-size: 0.95rem; }
+    
+      /* ---------- hero ---------- */
+      .hero { position: relative; border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 64px); margin-top: 8px; overflow: hidden;
+        background:
+          radial-gradient(520px 380px at 92% 8%, var(--lilac), transparent 70%),
+          radial-gradient(460px 360px at 70% 100%, color-mix(in srgb, var(--butter) 75%, transparent), transparent 70%),
+          radial-gradient(520px 420px at 0% 100%, var(--blush), transparent 70%),
+          var(--surface);
+        display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+      .hero-copy { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; min-width: 0; }
+      .live { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; font-size: 0.95rem; font-weight: 600; }
+      .live i { width: 10px; height: 10px; border-radius: 50%; background: #1FA971; box-shadow: 0 0 0 4px rgba(31, 169, 113, .2); }
+      .hero h1 { font-size: clamp(2.5rem, 5vw, 4.2rem); }
+      .lede { font-size: 1.25rem; line-height: 1.55; max-width: 31em; color: var(--muted); }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .byline { display: flex; align-items: center; gap: 14px; padding-top: 6px; }
+      .avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; letter-spacing: .02em; flex: none; }
+      .byline b { display: block; font-family: var(--font-display); font-size: 1.1rem; line-height: 1.2; }
+      .byline span { color: var(--muted); font-size: 0.95rem; }
+    
+      /* generated book covers */
+      .cover { --c-bg: var(--ink); --c-fg: #fff; --c-a: var(--rose-bright); --c-b: var(--butter);
+        container-type: inline-size; position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 6px 16px 16px 6px; background: var(--c-bg); color: var(--c-fg);
+        box-shadow: inset 12px 0 14px -10px rgba(0, 0, 0, .38), 0 26px 40px -20px rgba(23, 19, 58, .55), 0 4px 10px rgba(23, 19, 58, .14); }
+      /* artwork sits in the upper half, the title block in the lower half */
+      .cover::before { content: ""; position: absolute; width: 52%; aspect-ratio: 1; border-radius: 50%; background: var(--c-a); right: -8%; top: 11%; }
+      .cover::after { content: ""; position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--c-b); left: 15%; top: 33%; }
+      .cover-in { position: relative; z-index: 1; height: 100%; padding: 9cqw 9cqw 8cqw 13cqw; display: flex; flex-direction: column; }
+      .cover-kind { font-size: 5.4cqw; font-weight: 600; letter-spacing: .01em; }
+      .cover-title { margin-top: auto; font-family: var(--font-display); font-weight: 700; font-size: 10cqw; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
+      .cover.c2 .cover-title, .cover.c3 .cover-title { font-size: 8.6cqw; }
+      .cover-author { margin-top: 5cqw; font-size: 4.6cqw; font-weight: 600; opacity: .9; }
+      .cover.c2 { --c-bg: var(--butter); --c-fg: var(--ink); --c-a: var(--ink); --c-b: var(--rose-bright); }
+      .cover.c2::before { border-radius: 999px 999px 0 0; aspect-ratio: 1 / 1.15; width: 44%; right: auto; left: 30%; top: 12%; }
+      .cover.c2::after { width: 20%; left: auto; right: 12%; top: 16%; }
+      .cover.c3 { --c-bg: var(--rose); --c-fg: #fff; --c-a: var(--blush); --c-b: var(--mint); }
+      .cover.c3::before { width: 56%; right: -12%; top: 10%; }
+      .cover.c3::after { width: 24%; left: 14%; top: 34%; }
+    
+      .stack { position: relative; width: 100%; max-width: 480px; margin-inline: auto; aspect-ratio: 1 / 1.08; }
+      .stack .cover { position: absolute; width: 58%; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+      .stack .c1 { left: 0; top: 12%; transform: rotate(-9deg); z-index: 1; }
+      .stack .c2 { left: 21%; top: 0; transform: rotate(2deg); z-index: 3; }
+      .stack .c3 { right: 0; top: 18%; transform: rotate(11deg); z-index: 2; }
+      .stack:hover .c1 { transform: rotate(-13deg) translateX(-3%); }
+      .stack:hover .c3 { transform: rotate(15deg) translateX(3%); }
+      .float { position: absolute; z-index: 4; display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border-radius: 999px; padding: 9px 16px; font-size: 0.9rem; font-weight: 600; box-shadow: var(--shadow); }
+      .float::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--rose-bright); }
+      .float.f1 { left: -2%; bottom: 8%; }
+      .float.f2 { right: 0; top: 2%; }
+      .float.f2::before { background: var(--butter); }
+    
+      .hero-copy > *, .stack .cover { animation: rise .75s cubic-bezier(.2, .7, .2, 1) backwards; }
+      .hero-copy > :nth-child(2) { animation-delay: .07s; }
+      .hero-copy > :nth-child(3) { animation-delay: .14s; }
+      .hero-copy > :nth-child(4) { animation-delay: .21s; }
+      .hero-copy > :nth-child(5) { animation-delay: .28s; }
+      .stack .c1 { animation-delay: .15s; }
+      .stack .c2 { animation-delay: .27s; }
+      .stack .c3 { animation-delay: .39s; }
+      @keyframes rise { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+    
+      /* ---------- ticker ---------- */
+      .ticker { overflow: hidden; margin-block: 36px 8px; padding-block: 6px; }
+      .ticker-track { display: flex; width: max-content; animation: slide 36s linear infinite; }
+      .ticker ul { display: flex; align-items: center; flex: none; }
+      .ticker li { display: flex; align-items: center; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.5rem); letter-spacing: -0.02em; white-space: nowrap; }
+      .ticker li::after { content: ""; width: 14px; height: 14px; margin-inline: 28px; background: var(--rose-bright); border-radius: 3px; rotate: 45deg; }
+      .ticker li:nth-child(even)::after { background: var(--butter); border-radius: 50%; rotate: 0deg; }
+      @keyframes slide { to { transform: translateX(-50%); } }
+    
+      /* ---------- sections ---------- */
+      .section { padding-block: clamp(56px, 8vw, 104px) 0; }
+      .sec-head { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px 56px; align-items: end; margin-bottom: clamp(28px, 4vw, 48px); }
+      .sec-head h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
+      .sec-head p { color: var(--muted); max-width: 30em; }
+    
+      /* about */
+      .about { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 32px clamp(32px, 6vw, 80px); align-items: start; }
+      .portrait { aspect-ratio: 4 / 5; border-radius: 50% 50% 22px 22px / 38% 38% 22px 22px; background: linear-gradient(165deg, var(--blush), var(--lilac) 70%); display: grid; place-items: center; position: relative; overflow: hidden; }
+      .portrait span { font-family: var(--font-display); font-weight: 800; font-size: clamp(3.4rem, 8vw, 5.4rem); color: var(--rose); letter-spacing: -0.03em; }
+      .portrait::after { content: ""; position: absolute; width: 38%; aspect-ratio: 1; border-radius: 50%; background: var(--butter); right: 10%; bottom: 8%; opacity: .9; z-index: 0; }
+      .portrait span { position: relative; z-index: 1; }
+      .about-body { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+      .statement { font-family: var(--font-story); font-style: italic; font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.22; text-wrap: balance; }
+      .about-body .copy { display: flex; flex-direction: column; gap: 14px; max-width: 38em; color: var(--muted); }
+      .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .pillar { border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+      .pillar:nth-child(1) { background: var(--blush); }
+      .pillar:nth-child(2) { background: var(--butter); }
+      .pillar h3 { font-size: 1.35rem; }
+      .pillar p { font-size: 1rem; }
+      .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+      .facts > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 20px 22px; }
+      .facts dt { font-size: 0.9rem; font-weight: 600; color: var(--rose); }
+      .facts dd { margin: 6px 0 0; font-weight: 600; line-height: 1.4; font-size: 1rem; }
+    
+      /* samples */
+      .features { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
+      .feature { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(24px, 4vw, 52px); display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px clamp(28px, 5vw, 64px); align-items: center; box-shadow: var(--shadow); }
+      .feature:nth-child(1) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--lilac) 55%, var(--surface))); }
+      .feature:nth-child(2) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--butter) 40%, var(--surface))); }
+      .feature:nth-child(3) { background: linear-gradient(120deg, var(--surface) 55%, color-mix(in srgb, var(--blush) 70%, var(--surface))); }
+      .feature .cover { width: 100%; max-width: 300px; justify-self: center; transform: rotate(-3deg); }
+      .feature:nth-child(2) .cover { transform: rotate(2.5deg); }
+      .feature:nth-child(3) .cover { transform: rotate(-2deg); }
+      .feature-body { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+      .kind { align-self: flex-start; background: var(--ink); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; }
+      .feature h3 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
+      .feature-body > p { color: var(--muted); max-width: 36em; }
+      .did { display: grid; gap: 10px; font-size: 1rem; }
+      .did li { position: relative; padding-left: 32px; }
+      .did li::before { content: ""; position: absolute; left: 0; top: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--blush); }
+      .did li::after { content: ""; position: absolute; left: 7px; top: 7px; width: 8px; height: 5px; border-left: 2.5px solid var(--rose); border-bottom: 2.5px solid var(--rose); rotate: -45deg; }
+      .excerpt { background: color-mix(in srgb, var(--surface) 80%, transparent); border: 1px dashed #D6BFCB; border-radius: var(--radius-md); padding: 20px 24px; display: flex; flex-direction: column; gap: 10px; }
+      .excerpt-label { font-size: 0.8rem; font-weight: 700; color: var(--rose); }
+      .excerpt p:not(.excerpt-label) { font-family: var(--font-story); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink); max-width: 40em; }
+    
+      /* services */
+      .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .service { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 28px; display: flex; flex-direction: column; gap: 14px; transition: transform .2s, box-shadow .2s; }
+      .service:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: var(--blush); color: var(--rose); }
+      .service:nth-child(3n+2) .icon { background: var(--butter); color: var(--ink); }
+      .service:nth-child(3n) .icon { background: var(--lilac); color: #4B2FB0; }
+      .icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .service h3 { font-size: 1.3rem; }
+      .service p { color: var(--muted); font-size: 1rem; }
+    
+      /* principles band */
+      .band { margin-top: clamp(56px, 8vw, 104px); background: var(--rose); color: #fff; border-radius: var(--radius-lg); padding: clamp(32px, 6vw, 80px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px clamp(32px, 6vw, 80px); position: relative; overflow: hidden; }
+      .band::after { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: var(--rose-bright); right: -120px; bottom: -160px; opacity: .55; }
+      .band h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); position: relative; z-index: 1; }
+      .principles { display: grid; gap: 4px; position: relative; z-index: 1; }
+      .principles li { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.2; letter-spacing: -0.01em; padding-block: 16px; border-bottom: 1px solid rgba(255, 255, 255, .35); display: flex; gap: 16px; align-items: baseline; }
+      .principles li:last-child { border-bottom: 0; }
+      .principles li::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--butter); flex: none; translate: 0 -2px; }
+    
+      /* experience */
+      .roles { position: relative; display: flex; flex-direction: column; gap: 20px; padding-left: clamp(26px, 4vw, 44px); }
+      .roles::before { content: ""; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
+      .role-item { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(22px, 3vw, 34px); display: flex; flex-direction: column; gap: 10px; }
+      .role-item::before { content: ""; position: absolute; left: calc(-1 * clamp(26px, 4vw, 44px) + 0px); top: 34px; width: 16px; height: 16px; border-radius: 50%; background: var(--rose); border: 4px solid var(--bg); box-sizing: content-box; translate: -4px 0; }
+      .when { align-self: flex-start; background: var(--lilac); font-size: 0.85rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; font-variant-numeric: tabular-nums; }
+      .role-item h3 { font-size: 1.5rem; }
+      .org { color: var(--rose); font-weight: 700; }
+      .role-item > p:not(.org) { color: var(--muted); max-width: 44em; font-size: 1.02rem; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+      .chip { padding: 5px 13px; background: var(--blush); border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+    
+      /* toolkit */
+      .toolkit { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .tool-row { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; gap: 16px; }
+      .tool-row dt { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
+      .tool-row dd { margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+      .tool { display: inline-flex; align-items: center; gap: 9px; padding: 8px 16px 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-size: 0.95rem; font-weight: 600; }
+      .tool svg { width: 20px; height: 20px; flex: none; }
+      .tool small { color: var(--muted); font-weight: 500; font-size: 0.8rem; }
+      .i-word { color: #2B579A; }
+      .i-docs { color: #4285F4; }
+      .i-canva { color: var(--rose); }
+      .i-ig { color: #E4405F; }
+      .i-fb { color: #1877F2; }
+      .i-tt { color: var(--ink); }
+      .i-method { color: var(--rose); }
+    
+      /* contact */
+      .contact { margin-top: clamp(56px, 8vw, 104px); border-radius: var(--radius-lg); padding: clamp(24px, 5vw, 64px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 36px clamp(28px, 5vw, 72px); align-items: start;
+        background:
+          radial-gradient(480px 360px at 0% 0%, var(--butter), transparent 70%),
+          radial-gradient(520px 420px at 100% 100%, var(--lilac), transparent 70%),
+          var(--blush); }
+      .contact-intro { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+      .contact-intro h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); }
+      .contact-intro > p { color: var(--ink); opacity: .8; font-size: 1.15rem; }
+      .details { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+      .details div { background: color-mix(in srgb, var(--surface) 75%, transparent); border-radius: 16px; padding: 14px 18px; font-weight: 600; }
+      .details small { display: block; font-size: 0.8rem; font-weight: 600; color: var(--rose); }
+      form { display: flex; flex-direction: column; gap: 18px; background: var(--surface); border-radius: var(--radius-md); padding: clamp(22px, 3.5vw, 36px); box-shadow: var(--shadow); min-width: 0; }
+      .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+      label { font-weight: 700; font-size: 0.95rem; }
+      input, select, textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 14px; padding: 13px 15px; width: 100%; }
+      textarea { min-height: 140px; resize: vertical; }
+      input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; border-color: var(--focus); }
+      .err { color: #A3262F; font-size: 0.9rem; min-height: 1.2em; }
+      .result { display: flex; flex-direction: column; gap: 12px; padding: 16px; background: var(--lilac); border-radius: 16px; }
+      .result p { font-size: 0.95rem; }
+      .result pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: 0.95rem; background: var(--surface); border-radius: 12px; padding: 12px 14px; }
+      .result .btn { align-self: flex-start; }
+    
+      footer { max-width: 1160px; margin: 40px auto 0; padding-block: 28px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 0.95rem; }
+    
+      /* ---------- responsive ---------- */
+      @media (max-width: 960px) {
+        .hero, .band, .contact, .about, .sec-head { grid-template-columns: minmax(0, 1fr); }
+        .feature { grid-template-columns: minmax(0, 1fr); }
+        .feature .cover { max-width: 260px; justify-self: start; }
+        .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .portrait { max-width: 300px; }
+      }
+      @media (max-width: 760px) {
+        .menu-btn { display: inline-block; }
+        .nav { display: none; position: absolute; left: 0; right: 0; top: calc(100% + 8px); flex-direction: column; align-items: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 10px; box-shadow: var(--shadow); }
+        .top.open .nav { display: flex; }
+        .nav a { padding: 12px 16px; }
+        .bar-right .btn { display: none; }
+      }
+      @media (max-width: 620px) {
+        body { font-size: 1.0625rem; }
+        .pillars, .facts, .toolkit, .row, .services { grid-template-columns: minmax(0, 1fr); }
+        .float.f1 { left: 0; }
+        .stack { max-width: 360px; }
+        .live { font-size: 0.85rem; padding: 7px 14px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .hero-copy > *, .stack .cover { animation: none; }
+        .ticker-track { animation: none; width: auto; flex-wrap: wrap; }
+        .ticker ul[aria-hidden] { display: none; }
+        .ticker ul { flex-wrap: wrap; row-gap: 10px; }
+        .btn, .service, .stack .cover { transition: none; }
+      }
+    </style>
+    </head>
+      
+    <body>
+    <div class="wrap">
+      <header class="top" id="header">
+        <div class="bar">
+          <a class="brand" href="#top">Kalu Eunice Amarachi</a>
+          <nav class="nav" id="nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#samples">Writing samples</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#toolkit">Toolkit</a>
+          </nav>
+          <div class="bar-right">
+            <a class="btn btn-solid btn-sm" href="#contact">Let’s talk</a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+          </div>
+        </div>
+      </header>
+    
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-h">
+          <div class="hero-copy">
+            <p class="live"><i aria-hidden="true"></i>Available for remote freelance projects</p>
+            <h1 id="hero-h">Every story should make the reader feel something.</h1>
+            <p class="lede">I write emotionally engaging stories that help creators, brands, and individuals connect with their audiences and leave a lasting impression.</p>
+            <div class="actions">
+              <a class="btn btn-solid" href="#samples">Read the writing samples</a>
+              <a class="btn btn-line" href="#contact">Have a story to tell?</a>
+            </div>
+            <div class="byline">
+              <div class="avatar" aria-hidden="true"><img src="headshot.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:50%;display:block"></div>
+              <div>
+                <b>Kalu Eunice Amarachi</b>
+                <span>Storytelling Ghostwriter, Imo State, Nigeria</span>
+              </div>
+            </div>
+          </div>
+    
+          <div class="stack" role="img" aria-label="Covers of three writing samples: The Last Message, A Note to the Woman I’m Becoming, and The Small Business Behind the Scent">
+            <div class="cover c1"><div class="cover-in"><span class="cover-kind">A short story</span><span class="cover-title">The Last Message</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+            <div class="cover c2"><div class="cover-in"><span class="cover-kind">A reflective story</span><span class="cover-title">A Note to the Woman I’m Becoming</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+            <div class="cover c3"><div class="cover-in"><span class="cover-kind">A brand story</span><span class="cover-title">The Small Business Behind the Scent</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+            <span class="float f1">Relationship stories</span>
+            <span class="float f2">Brand stories</span>
+          </div>
+        </section>
+    
+        <div class="ticker" aria-label="Focus areas: Storytelling, Relationship Stories, Personal Growth, Brand Stories, Social Media Content">
+          <div class="ticker-track">
+            <ul>
+              <li>Storytelling</li><li>Relationship Stories</li><li>Personal Growth</li><li>Brand Stories</li><li>Social Media Content</li>
+            </ul>
+            <ul aria-hidden="true">
+              <li>Storytelling</li><li>Relationship Stories</li><li>Personal Growth</li><li>Brand Stories</li><li>Social Media Content</li>
+            </ul>
+          </div>
+        </div>
+    
+        <section class="section" id="about" aria-labelledby="about-h">
+          <div class="sec-head">
+            <h2 id="about-h">About me</h2>
+          </div>
+          <div class="about">
+            <!-- Replace the monogram with <img src="headshot.jpg" alt="Kalu Eunice Amarachi"> once the headshot arrives. -->
+            <div class="portrait" aria-hidden="true"><img src="headshot.jpg" alt="Kalu Eunice Amarachi" style="position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block"></div>
+            <div class="about-body">
+              <p class="statement">I am an emerging storytelling ghostwriter who turns ideas, experiences, and emotions into clear, engaging stories.</p>
+              <div class="copy">
+                <p>I focus on writing content that feels relatable, keeps readers interested, and encourages them to connect, reflect, or take action. I can help creators and businesses communicate their message through thoughtful storytelling.</p>
+              </div>
+              <div class="pillars">
+                <div class="pillar">
+                  <h3>Creative storytelling</h3>
+                  <p>Relationship stories, emotional stories, fictional narratives, and personal-growth stories.</p>
+                </div>
+                <div class="pillar">
+                  <h3>Brand and social storytelling</h3>
+                  <p>Relatable content that helps individuals and businesses communicate their values and connect with their audience.</p>
+                </div>
+              </div>
+              <dl class="facts">
+                <div><dt>Education</dt><dd>B.Sc. Industrial Physics, Ebonyi State University, Abakaliki (2024)</dd></div>
+                <div><dt>Currently</dt><dd>Developing practical skills in storytelling, ghostwriting, and digital content creation</dd></div>
+                <div><dt>Based in</dt><dd>Owerri, Imo State, Nigeria</dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+    
+        <section class="section" id="samples" aria-labelledby="samples-h">
+          <div class="sec-head">
+            <h2 id="samples-h">Writing samples</h2>
+            <p>Original pieces written to show how I open a story, build tension, and close it. None were commissioned by a client.</p>
+          </div>
+          <div class="features">
+            <article class="feature">
+              <div class="cover c1"><div class="cover-in"><span class="cover-kind">A short story</span><span class="cover-title">The Last Message</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+              <div class="feature-body">
+                <span class="kind">Relationship fiction, emotional short story</span>
+                <h3>The Last Message</h3>
+                <p>An original short story built around a breakup message and the emotional weight of shared memories. Written to demonstrate emotional hooks and reader engagement.</p>
+                <ul class="did">
+                  <li>Developed the premise and emotional conflict.</li>
+                  <li>Wrote an attention-grabbing opening.</li>
+                  <li>Used concise dialogue and relatable details.</li>
+                  <li>Built tension around the final message.</li>
+                  <li>Structured the story for possible social media serialisation.</li>
+                </ul>
+                <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
+                  <p class="excerpt-label">Excerpt</p>
+                  <p><strong>PART 1: FOUR WORDS THAT CHANGED EVERYTHING</strong></p>
+                  <p>At exactly 11:47 p.m., her phone vibrated.</p>
+                  <p>She picked it up, expecting his usual goodnight message.</p>
+                  <p>But what she saw made her heart stop.</p>
+                  <p>“I think we should end this.”</p>
+                  <details>
+                    <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
+                    <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+                      <p>She read it once.</p>
+                      <p>Twice.</p>
+                      <p>Then a third time, hoping the words would somehow change.</p>
+                      <p>Three years.</p>
+                      <p>Three years of memories, promises, late-night calls, laughter, arguments, and dreams about forever.</p>
+                      <p>And all he needed to end it were four words.</p>
+                      <p>She typed, “Why?”</p>
+                      <p>Deleted it.</p>
+                      <p>Typed, “Did I do something wrong?”</p>
+                      <p>Deleted that too.</p>
+                      <p>Finally, she gathered the courage to ask the question that had been eating her up for months.</p>
+                      <p>“Did you ever really love me?”</p>
+                      <p>For several minutes, there was silence.</p>
+                      <p>Then the typing bubbles appeared.</p>
+                      <p>Disappeared.</p>
+                      <p>Appeared again.</p>
+                      <p>Her heart raced.</p>
+                      <p>Finally, his reply came.</p>
+                      <p>“I did. I just stopped knowing how.”</p>
+                      <p>She dropped her phone onto the bed.</p>
+                      <p>Tears rolled down her cheeks.</p>
+                      <p>But something about his response bothered her.</p>
+                      <p>If he had stopped knowing how to love her, when did it happen?</p>
+                      <p>Was it when he started ignoring her calls?</p>
+                      <p>When his replies became shorter?</p>
+                      <p>Or when she began feeling lonely even while she was still in a relationship?</p>
+                      <p>She wiped her tears and opened their old pictures.</p>
+                      <p>Then she noticed something she had never paid attention to before.</p>
+                      <p>In almost every recent picture, she was smiling.</p>
+                      <p>But he wasn’t looking at her.</p>
+                      <p>He was always looking somewhere else.</p>
+                      <p>She stared at one picture for a long time.</p>
+                      <p>Then her phone vibrated again.</p>
+                      <p>It was him.</p>
+                      <p>One final message.</p>
+                      <p>“There’s something I should have told you a long time ago.”</p>
+                      <p>Her hands began to shake.</p>
+                      <p>She opened the message.</p>
+                      <p>And what she read next changed everything.</p>
+                      <p>TO BE CONTINUED…</p>
+                      <p>Sometimes, the hardest part of losing someone isn’t saying goodbye. It’s discovering what they kept from you while you were still holding on.</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </article>
+    
+            <article class="feature">
+              <div class="cover c2"><div class="cover-in"><span class="cover-kind">A reflective story</span><span class="cover-title">A Note to the Woman I’m Becoming</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+              <div class="feature-body">
+                <span class="kind">Personal-growth, reflective storytelling</span>
+                <h3>A Note to the Woman I’m Becoming</h3>
+                <p>A reflective story about self-worth, rebuilding confidence, and choosing progress during difficult seasons, written to create an intimate connection with readers.</p>
+                <ul class="did">
+                  <li>Chose a relatable personal-growth theme.</li>
+                  <li>Created a warm, honest narrative voice.</li>
+                  <li>Connected struggle with hope and practical reflection.</li>
+                  <li>Wrote a memorable closing message suitable for social media.</li>
+                </ul>
+                <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
+                  <p class="excerpt-label">Excerpt</p>
+                  <p>Dear future me, I hope you are proud of how far we’ve come.</p>
+                  <p>Dear woman I’m becoming,</p>
+                  <p>I hope you remember the girl who kept going even when life gave her every reason to give up.</p>
+                  <p>I hope you remember the nights she cried silently because she didn’t know how things would work out.</p>
+                  <details>
+                    <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
+                    <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+                      <p>The mornings she woke up with a heavy heart but still found the strength to face another day.</p>
+                      <p>The dreams she kept private because she was afraid people would laugh at how big they were.</p>
+                      <p>I hope you never forget her.</p>
+                      <p>She wasn’t perfect. She made mistakes, trusted the wrong people, questioned her worth and sometimes settled for less than she deserved.</p>
+                      <p>But she was trying.</p>
+                      <p>Trying to understand herself. Trying to build a better life. Trying to become someone she could look at in the mirror and genuinely admire.</p>
+                      <p>I know the journey won’t always be easy.</p>
+                      <p>There will be moments when you’ll feel behind, when your achievements seem small and when you’ll wonder if all your efforts are worth it.</p>
+                      <p>But please, don’t be too hard on yourself.</p>
+                      <p>You are allowed to grow slowly.</p>
+                      <p>You are allowed to change your mind.</p>
+                      <p>You are allowed to outgrow people, places and versions of yourself that no longer reflect who you are.</p>
+                      <p>And most importantly, you are allowed to start again.</p>
+                      <p>I hope you become a woman who chooses peace over approval, purpose over pressure and self-respect over temporary happiness.</p>
+                      <p>I hope you build the life you once prayed for.</p>
+                      <p>But even if everything doesn’t happen exactly as planned, I hope you never stop believing in yourself.</p>
+                      <p>Until then, keep growing. Keep learning. Keep showing up.</p>
+                      <p>I’m not where I want to be yet, but I’m no longer where I used to be.</p>
+                      <p>And that, in itself, is progress.</p>
+                      <p>With love,<br>The woman who refused to give up.</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </article>
+    
+            <article class="feature">
+              <div class="cover c3"><div class="cover-in"><span class="cover-kind">A brand story</span><span class="cover-title">The Small Business Behind the Scent</span><span class="cover-author">Kalu Eunice Amarachi</span></div></div>
+              <div class="feature-body">
+                <span class="kind">Brand storytelling, promotional copy</span>
+                <h3>The Small Business Behind the Scent</h3>
+                <p>A proposed brand story showing how a small perfume business can communicate its personality, customer experience, and value through warm, customer-focused storytelling. This is a concept sample.</p>
+                <ul class="did">
+                  <li>Framed the brand story around identity and confidence.</li>
+                  <li>Used customer-focused language.</li>
+                  <li>Connected fragrance with mood and self-expression.</li>
+                  <li>Developed copy suitable for a social media post or an About section.</li>
+                </ul>
+                <div class="excerpt" style="border-style:solid;border-color:var(--line);background:var(--surface)">
+                  <p class="excerpt-label">Excerpt</p>
+                  <p>Every beautiful scent has a story. This one began with a dream.</p>
+                  <p>It started with a simple desire: to make people feel beautiful, confident and unforgettable.</p>
+                  <p>What looked like a small perfume business to the outside world was something much bigger to the woman behind it.</p>
+                  <p>It was a dream built from little savings, late nights, countless prayers and the courage to start something of her own.</p>
+                  <details>
+                    <summary style="cursor:pointer;font-weight:700;font-size:0.95rem;color:var(--rose);padding:8px 0">Read the rest</summary>
+                    <div class="rest" style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+                      <p>There were days when orders came in, and there were days when her phone remained silent.</p>
+                      <p>There were moments she questioned whether she was doing enough, whether people would trust her brand and whether her little business would ever become something remarkable.</p>
+                      <p>But she kept going.</p>
+                      <p>Every perfume bottle she packaged carried more than fragrance. It carried dedication, hope and a piece of a dream she refused to abandon.</p>
+                      <p>She wasn’t just selling perfumes. She was helping people create memories, express their personalities and leave a beautiful impression wherever they went.</p>
+                      <p>With every customer, every order and every recommendation, the dream grew a little stronger.</p>
+                      <p>Today, the journey is still unfolding.</p>
+                      <p>The brand may be small, but the vision has never been small.</p>
+                      <p>Because behind every bottle is a woman who dared to begin, even when she didn’t have everything figured out.</p>
+                      <p>This is more than a fragrance business. It’s a story of passion, courage and the beauty of starting small.</p>
+                      <p>Small beginnings. Beautiful impressions. A scent worth remembering.</p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+    
+        <section class="section" id="services" aria-labelledby="services-h">
+          <div class="sec-head">
+            <h2 id="services-h">Services</h2>
+            <p>Six kinds of writing I take on for creators, brands, and individuals.</p>
+          </div>
+          <ul class="services">
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+              <h3>Emotional storytelling</h3>
+              <p>Narratives that help readers feel connected to the people and experiences in a story.</p>
+            </li>
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+              <h3>Relationship stories</h3>
+              <p>Relatable stories about love, heartbreak, communication, and personal decisions.</p>
+            </li>
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+              <h3>Personal-growth content</h3>
+              <p>Lessons and life experiences turned into encouraging, reflective writing.</p>
+            </li>
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
+              <h3>Brand storytelling</h3>
+              <p>Words that help a business express its personality, values, and customer promise.</p>
+            </li>
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></div>
+              <h3>Social media writing</h3>
+              <p>Short, engaging posts designed for platforms such as Instagram, Facebook, and TikTok.</p>
+            </li>
+            <li class="service">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+              <h3>Creative writing and editing</h3>
+              <p>Story ideas developed, flow improved, and wording polished for clarity and impact.</p>
+            </li>
+          </ul>
+        </section>
+    
+        <section class="band" id="principles" aria-labelledby="principles-h">
+          <h2 id="principles-h">How I work</h2>
+          <ul class="principles">
+            <li>Make the reader feel something.</li>
+            <li>Keep the message clear and relatable.</li>
+            <li>Respect each client’s voice and brief.</li>
+            <li>Revise carefully and meet agreed deadlines.</li>
+          </ul>
+        </section>
+    
+        <section class="section" id="experience" aria-labelledby="experience-h">
+          <div class="sec-head">
+            <h2 id="experience-h">Experience</h2>
+            <p>Where I have built my writing and communication skills.</p>
+          </div>
+          <div class="roles">
+            <article class="role-item">
+              <span class="when">2024 to present</span>
+              <h3>Secretary / Administrative Support</h3>
+              <p class="org">Yhugo’s Properties &amp; Co.</p>
+              <p>Support daily office operations by handling correspondence and calls, responding to client inquiries, preparing documents and reports, maintaining filing systems, and keeping administrative tasks organized. This work has strengthened my written communication, organization, and attention to detail.</p>
+              <ul class="chips">
+                <li class="chip">Written Communication</li>
+                <li class="chip">Client Relations</li>
+                <li class="chip">Document Preparation</li>
+                <li class="chip">Organization</li>
+                <li class="chip">Attention to Detail</li>
+              </ul>
+            </article>
+            <article class="role-item">
+              <span class="when">2026 to present</span>
+              <h3>Storytelling Ghostwriter</h3>
+              <p class="org">Independent storytelling portfolio</p>
+              <p>Developing original short-story samples across relationship, emotional, personal-growth, and brand-storytelling themes. Practising opening hooks, narrative pacing, relatable voice, and endings suited to digital audiences.</p>
+              <ul class="chips">
+                <li class="chip">Creative Writing</li>
+                <li class="chip">Story Development</li>
+                <li class="chip">Hooks</li>
+                <li class="chip">Editing</li>
+                <li class="chip">Social Storytelling</li>
+              </ul>
+            </article>
+            <article class="role-item">
+              <span class="when">Personal business</span>
+              <h3>Marketing Content Creator and Developer</h3>
+              <p class="org">Scent by Marah / Marah’s Touch Cleaning Services</p>
+              <p>Support small-business promotion by writing customer-facing copy, social media captions, service descriptions, and promotional messages for perfume and cleaning-service offerings.</p>
+              <ul class="chips">
+                <li class="chip">Promotional Writing</li>
+                <li class="chip">Customer Communication</li>
+                <li class="chip">Social Media Content</li>
+                <li class="chip">Brand Messaging</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+    
+        <section class="section" id="toolkit" aria-labelledby="toolkit-h">
+          <div class="sec-head">
+            <h2 id="toolkit-h">Toolkit</h2>
+            <p>The tools and methods I use to draft, design, and share stories.</p>
+          </div>
+          <dl class="toolkit">
+            <div class="tool-row">
+              <dt>Writing and drafting</dt>
+              <dd>
+                <span class="tool"><svg class="i-word" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M64 48l112 0 0 88c0 39.8 32.2 72 72 72l88 0 0 240c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16zM224 67.9l92.1 92.1-68.1 0c-13.3 0-24-10.7-24-24l0-68.1zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-261.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0L64 0zm71.3 274.2c-3.2-12.9-16.2-20.7-29.1-17.5S85.5 273 88.7 285.8l32 128c2.5 10.2 11.4 17.5 21.9 18.1s20.1-5.7 23.8-15.5l25.5-68.1 25.5 68.1c3.7 9.8 13.3 16.1 23.8 15.5s19.4-7.9 21.9-18.1l32-128c3.2-12.9-4.6-25.9-17.5-29.1s-25.9 4.6-29.1 17.5l-13.3 53.2-20.9-55.8C211 262.2 202 256 192 256s-19 6.2-22.5 15.6l-20.9 55.8-13.3-53.2z"/></svg>Microsoft Word<small>working knowledge</small></span>
+                <span class="tool"><svg class="i-docs" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818zm0-3.273H7.091V9.273h9.818zM14.727 6h6l-6-6z"/></svg>Google Docs<small>working knowledge</small></span>
+              </dd>
+            </div>
+            <div class="tool-row">
+              <dt>Portfolio design</dt>
+              <dd>
+                <span class="tool"><svg class="i-canva" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M512 256c0 .9 0 1.8 0 2.7-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48 0 3.4 .4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5 .1-7 .2-10.6 .2-141.4 0-256-114.6-256-256S114.6 0 256 0 512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>Canva<small>working knowledge</small></span>
+              </dd>
+            </div>
+            <div class="tool-row">
+              <dt>Social platforms</dt>
+              <dd>
+                <span class="tool"><svg class="i-ig" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.9 5.9 0 0 0-2.124 1.388 5.9 5.9 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076s-.069 1.688-.063 4.947.021 3.667.083 4.947c.061 1.277.264 2.149.563 2.911.308.789.72 1.457 1.388 2.123a5.9 5.9 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552 1.278.056 1.689.069 4.947.063s3.668-.021 4.947-.082c1.28-.06 2.147-.265 2.91-.563a5.9 5.9 0 0 0 2.123-1.388 5.9 5.9 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912.056-1.28.07-1.69.063-4.948-.006-3.258-.02-3.667-.081-4.947-.06-1.28-.264-2.148-.564-2.911a5.9 5.9 0 0 0-1.387-2.123 5.86 5.86 0 0 0-2.128-1.38C19.074.322 18.202.12 16.924.066 15.647.009 15.236-.006 11.977 0S8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.7 3.7 0 0 1-1.382-.895 3.7 3.7 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228-.06-1.264-.072-1.644-.08-4.848-.006-3.204.006-3.583.061-4.848.05-1.169.246-1.805.408-2.228.216-.561.477-.96.895-1.382a3.7 3.7 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417 1.265-.06 1.644-.072 4.848-.08 3.203-.006 3.583.006 4.85.062 1.168.05 1.804.244 2.227.408.56.216.96.475 1.382.895s.681.817.9 1.378c.165.422.362 1.056.417 2.227.06 1.265.074 1.645.08 4.848.005 3.203-.006 3.583-.061 4.848-.051 1.17-.245 1.805-.408 2.23-.216.56-.477.96-.896 1.38a3.7 3.7 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418-1.266.06-1.645.072-4.85.079s-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442 1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024 6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16 4 4 0 0 1 8 12.008"/></svg>Instagram<small>working knowledge</small></span>
+                <span class="tool"><svg class="i-fb" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a9 9 0 0 1 1.141.195v3.325a9 9 0 0 0-.653-.036 27 27 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.7 1.7 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647"/></svg>Facebook<small>working knowledge</small></span>
+                <span class="tool"><svg class="i-tt" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07"/></svg>TikTok<small>working knowledge</small></span>
+              </dd>
+            </div>
+            <div class="tool-row">
+              <dt>Writing methods</dt>
+              <dd>
+                <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path id="nib" d="M368.5 18.3l-50.1 50.1 125.3 125.3 50.1-50.1c21.9-21.9 21.9-57.3 0-79.2L447.7 18.3c-21.9-21.9-57.3-21.9-79.2 0zM279.3 97.2l-.5 .1-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-2.9 8.7-1.9 18.2 2.5 26L161.7 316.4c-1.1-4-1.6-8.1-1.6-12.4 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-4.3 0-8.5-.6-12.4-1.6L40.3 505.7c7.8 4.4 17.2 5.4 26 2.5l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 .1-.5-135.5-135.5z"/></svg>Story outlines</span>
+                <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Hooks</span>
+                <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Narrative structure</span>
+                <span class="tool"><svg class="i-method" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><use href="#nib"/></svg>Proofreading</span>
+              </dd>
+            </div>
+          </dl>
+        </section>
+    
+        <section class="contact" id="contact" aria-labelledby="contact-h">
+          <div class="contact-intro">
+            <h2 id="contact-h">Have a story to tell? Let’s bring it to life.</h2>
+            <p>Contact me to discuss your project.</p>
+            <div class="details" id="details">
+              <div><small>Location</small>Owerri, Imo State, Nigeria</div>
+              <div><small>Availability</small>Remote freelance projects</div>
+              <div id="emailRow" hidden><small>Email</small><a id="emailLink" href="#"></a></div>
+              <div id="phoneRow" hidden><small>Phone</small><span id="phoneText"></span></div>
+            </div>
+          </div>
+          <form id="inquiry" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+                <div class="err" id="e-name" aria-live="polite"></div>
+              </div>
+              <div class="field">
+                <label for="f-email">Your email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required>
+                <div class="err" id="e-email" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-type">What do you need written?</label>
+              <select id="f-type" name="type">
+                <option>Relationship or emotional story</option>
+                <option>Personal-growth content</option>
+                <option>Brand story</option>
+                <option>Social media content</option>
+                <option>Editing a draft</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg">Tell me about your project</label>
+              <textarea id="f-msg" name="message" required></textarea>
+              <div class="err" id="e-msg" aria-live="polite"></div>
+            </div>
+            <button class="btn btn-solid" type="submit">Send inquiry</button>
+            <div class="result" id="result" hidden>
+              <p id="resultNote"></p>
+              <pre id="resultText"></pre>
+            </div>
+          </form>
+        </section>
+      </main>
+    
+      <footer>
+        <span>© <span id="yr">2026</span> Kalu Eunice Amarachi</span>
+        <span>Storytelling Ghostwriter, Imo State, Nigeria</span>
+      </footer>
+    </div>
+    
+    <script>
+      /* Contact details. Fill these in once confirmed and the matching rows appear. */
+      var CONTACT = { email: "amarachieunice271@gmail.com", phone: "" };
+    
+      (function () {
+        document.getElementById("yr").textContent = new Date().getFullYear();
+    
+        if (CONTACT.email) {
+          document.getElementById("emailRow").hidden = false;
+          var a = document.getElementById("emailLink");
+          a.textContent = CONTACT.email;
+          a.href = "mailto:" + CONTACT.email;
+          }
+        if (CONTACT.phone) {
+          document.getElementById("phoneRow").hidden = false;
+          document.getElementById("phoneText").textContent = CONTACT.phone;
+        }
+    
+        /* mobile menu */
+        var header = document.getElementById("header");
+        var menuBtn = document.getElementById("menuBtn");
+        function setMenu(open) {
+          header.classList.toggle("open", open);
+          menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+          menuBtn.textContent = open ? "Close" : "Menu";
+        }
+        menuBtn.addEventListener("click", function () { setMenu(!header.classList.contains("open")); });
+        document.getElementById("nav").addEventListener("click", function (e) {
+          if (e.target.tagName === "A") setMenu(false);
+        });
+    
+        /* inquiry form */
+        var form = document.getElementById("inquiry");
+        var result = document.getElementById("result");
+        var text = "";
+        function setErr(id, msg) { document.getElementById(id).textContent = msg || ""; }
+    
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = form.name.value.trim();
+          var email = form.email.value.trim();
+          var msg = form.message.value.trim();
+          var ok = true;
+          setErr("e-name", name ? "" : "Enter your name."); if (!name) ok = false;
+          var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          setErr("e-email", emailOk ? "" : "Enter an email address like name@example.com."); if (!emailOk) ok = false;
+          setErr("e-msg", msg ? "" : "Add a few lines about your project."); if (!msg) ok = false;
+          if (!ok) { result.hidden = true; return; }
+    
+          // Send to client's email via FormSubmit
+          result.hidden = false;
+          document.getElementById("resultNote").textContent = "Sending...";
+          document.getElementById("resultText").textContent = "";
+    
+         fetch("https://formsubmit.co/ajax/" + CONTACT.email, {
+           method: "POST",
+           headers: { "Content-Type": "application/json", "Accept": "application/json" },
+           body: JSON.stringify({
+             name: name,
+             email: email,
+              "project-type": form.type.value,
+             message: msg,
+             _subject: "New " + form.type.value + " inquiry from portfolio site",
+             _template: "table"
+           })
+          })
+         .then(function(response) { return response.json(); })
+         .then(function(data) {
+            document.getElementById("resultNote").textContent = "Sent! We will get back to you soon.";
+            document.getElementById("resultText").textContent = "Name: " + name + "\nEmail: " + email + "\nProject type: " + form.type.value + "\n\n" + msg;
+            form.reset();
+         })
+          .catch(function() {
+           document.getElementById("resultNote").textContent = "Could not send. Please email us directly at " + CONTACT.email;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
